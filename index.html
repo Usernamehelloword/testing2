@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>🖼Picture.</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Sidebar Toggle Button -->
+  <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="sidebar">
+    <button id="sidebarClose" class="sidebar-close">.</button>
+    <ul class="sidebar-menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </aside>
+
+  <!-- Header -->
+  <header>
+   
+    <h1 class="logo-title">🖼Picture.</h1>
+    <nav class="nav-bar">
+      <ul class="nav-list">
+        <li><a href="#home" onclick="changeText(this)">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h2>Picture</h2>
+      <p>Welcome to our website! This picture invites you in with warmth, creativity, and a sense of discovery and connection.</p>
+      <p>The picture captures a peaceful landscape with soft sunlight spilling over rolling hills. Trees sway gently in the breeze, and a calm river winds through the valley, reflecting the sky.</p>
+      <button class="btn-primary" onclick="orderNow()">Order Now</button>
+      <a class="btn-secondary" href="#contact">Contact Us</a>
+    </div>
+    <div class="hero-image">
+      <img src="11.png" alt="Hero Picture" />
+    </div>
+  </section>
+
+  <main>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <img src="e6.jpg" alt="About picture" class="about-image" />
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>A picture of a mountain captures nature’s majesty—towering peaks, snow-capped tops, and rugged cliffs. Mist drifts along the slopes, while sunlight casts dramatic shadows. It evokes awe, peace, and the power of Earth’s ancient, enduring beauty in a single breathtaking view.</p>
+        <div class="social-links">
+          <!-- Social icons here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+      <h2>Our Menu</h2>
+      <div class="search-container">
+        <input type="text" id="search" class="search" placeholder="Search..." />
+        <button id="button-search" class="button-search">Search</button>
+      </div>
+      <ul class="menu-list">
+        <li class="menu-item">
+          <img src="Emotional Stress.jpg" alt="Emotional Stress" />
+          <h3>Emotional Stress</h3>
+          <p>Tears fall silently, drowning hope in a sea of sorrow.</p>
+        </li>
+        <li class="menu-item">
+          <img src="Work Stress.jpg" alt="Work Stress" />
+          <h3>Work Stress</h3>
+          <p>Tired eyes, fake smiles. Another day chasing meaningless expectations.</p>
+        </li>
+        <li class="menu-item">
+          <img src="Financial Stress.jpg" alt="Financial Stress" />
+          <h3>Financial Stress</h3>
+          <p>Empty pockets echo louder than dreams ever dared to speak.</p>
+        </li>
+        <li class="menu-item">
+          <img src="Physical Stress.jpg" alt="Physical Stress" />
+          <h3>Physical Stress</h3>
+          <p>Pain lingers quietly, stealing strength with every shallow breath taken.</p>
+        </li>
+        <li class="menu-item">
+          <img src="Social Stress.jpg" alt="Social Stress" />
+          <h3>Social Stress</h3>
+          <p>Smiles feel forced, masks cracking beneath judgmental, watching eyes daily.</p>
+        </li>
+        <li class="menu-item">
+          <img src="Existential Stress.jpg" alt="Existential Stress" />
+          <h3>Existential Stress</h3>
+          <p>Purpose fades slowly, like stars swallowed by a black sky.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+      <h2>Testimonials</h2>
+      <div class="swiper">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide">
+            <img src="e7.jpg" alt="Active Recall" />
+            <h3>Active Recall</h3>
+            <p>Test yourself regularly on the material to improve memory retention.</p>
+          </li>
+          <li class="swiper-slide">
+            <img src="e8.jpg" alt="Spaced Repetition" />
+            <h3>Spaced Repetition</h3>
+            <p>Review the material over time to reinforce learning and prevent forgetting.</p>
+          </li>
+          <li class="swiper-slide">
+            <img src="e9.jpg" alt="Eliminate Distractions" />
+            <h3>Eliminate Distractions</h3>
+            <p>Focus improves drastically in minimalistic environments.</p>
+          </li>
+        </ul>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+      <h2>Gallery</h2>
+      <ul class="gallery-list">
+        <li><img src="e2.jpg" alt="PIC 1" /></li>
+        <li><img src="e3.jpg" alt="PIC 2" /></li>
+        <li><img src="e4.jpg" alt="PIC 3" /></li>
+        <li><img src="e5.jpg" alt="PIC 4" /></li>
+        <li><img src="e14.jpg" alt="PIC 5" /></li>
+        <li><img src="e22.jpg" alt="PIC 6" /></li>
+      </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <h2>Contact Us</h2>
+      <p><a href="https://usernamehelloword.github.io/coffee/">Visit Website</a></p>
+      <p><a href="https://pin.it/6jsNq5S88">View More Pictures</a></p>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" placeholder="Your message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>
