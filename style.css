@@ -375,5 +375,35 @@ body.sidebar-open {
    background: rgba(0,0,0,0.4);
 
 }
+#text_input{
+  width: 600px;
+  height: 250px;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 60%;
+  resize: none;
+  outline: 0;
+  color: #fff;
+  background-color: #403d84;
+
+}
+#voice-select{
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 20%;
+  height: 40px;
+  background-color: #403d84;
+  margin-bottom: 10px;
+}
+.button-voice{
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: chocolate;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
 
 
