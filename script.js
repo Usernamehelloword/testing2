@@ -163,3 +163,51 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+let speech = new SpeechSynthesisUtterance();
+
+// DOM elements
+const textInput = document.getElementById("text_input");
+const voiceSelect = document.getElementById("voice-select");
+const speedRange = document.getElementById("speed-range");
+const speedValue = document.getElementById("speed-value");
+const speakButton = document.getElementById("button-text");
+
+let voices = [];
+
+// Load voices
+window.speechSynthesis.onvoiceschanged = () => {
+  voices = window.speechSynthesis.getVoices();
+  voiceSelect.innerHTML = ""; // clear old options
+
+  voices.forEach((voice, index) => {
+    const option = new Option(voice.name, index);
+    voiceSelect.add(option);
+  });
+
+  // Default to the first available voice
+  if (voices.length > 0) {
+    speech.voice = voices[0];
+  }
+};
+
+// Handle voice change
+voiceSelect.addEventListener("change", () => {
+  speech.voice = voices[voiceSelect.value];
+});
+
+// Handle speed change
+speedRange.addEventListener("input", () => {
+  const rate = parseFloat(speedRange.value);
+  speech.rate = rate;
+  speedValue.textContent = rate.toFixed(2) + "x";
+});
+
+// Handle Speak button
+speakButton.addEventListener("click", () => {
+  speech.text = textInput.value.trim();
+  if (speech.text) {
+    window.speechSynthesis.cancel(); // stop previous speech
+    window.speechSynthesis.speak(speech);
+  }
+});
+
