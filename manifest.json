@@ -1,0 +1,21 @@
+{
+  "name": "View Pictures",
+  "short_name": "ViewPictures",
+  "description": "View pictures in our curated gallery of stunning photography capturing emotions, nature, and everyday beauty.",
+  "start_url": "https://example.com/",
+  "display": "standalone",
+  "background_color": "#8b4513",
+  "theme_color": "#8b4513",
+  "icons": [
+    {
+      "src": "https://example.com/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://example.com/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
