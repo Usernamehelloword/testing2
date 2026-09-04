@@ -1,14 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>🖼Picture.</title>
+  <title>Picture - Creative Photography & Visual Storytelling Gallery</title>
+  <meta name="description" content="Explore Picture, a curated gallery of stunning photography capturing emotions, nature, and everyday beauty. Discover visual stories through our diverse collection of images and testimonials." />
+  <meta name="keywords" content="photography, gallery, pictures, visual storytelling, nature photography, emotional photography, creative gallery, image collection, art, visual art" />
+  <meta name="author" content="Picture" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://example.com/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:title" content="Picture - Creative Photography & Visual Storytelling Gallery" />
+  <meta property="og:description" content="Explore Picture, a curated gallery of stunning photography capturing emotions, nature, and everyday beauty." />
+  <meta property="og:image" content="https://example.com/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://example.com/" />
+  <meta property="twitter:title" content="Picture - Creative Photography & Visual Storytelling Gallery" />
+  <meta property="twitter:description" content="Explore Picture, a curated gallery of stunning photography capturing emotions, nature, and everyday beauty." />
+  <meta property="twitter:image" content="https://example.com/og-image.jpg" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Picture",
+    "url": "https://example.com/",
+    "description": "A curated gallery of stunning photography capturing emotions, nature, and everyday beauty.",
+    "inLanguage": "en-US",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://example.com/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "Picture Gallery",
+    "url": "https://example.com/",
+    "description": "A curated collection of photography and visual art.",
+    "about": {
+      "@type": "Thing",
+      "name": "Photography and Visual Storytelling"
+    }
+  }
+  </script>
+
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script defer src="script.js"></script>
 </head>
+
 <body>
   <!-- Sidebar Toggle Button -->
   <button id="sidebarToggle" class="sidebar-toggle">☰</button>
@@ -28,7 +83,7 @@
 
   <!-- Header -->
   <header>
-   
+
     <h1 class="logo-title">🖼Picture.</h1>
     <nav class="nav-bar">
       <ul class="nav-list">
@@ -46,8 +101,10 @@
   <section id="home" class="hero">
     <div class="hero-text">
       <h2>Picture</h2>
-      <p>Welcome to our website! This picture invites you in with warmth, creativity, and a sense of discovery and connection.</p>
-      <p>The picture captures a peaceful landscape with soft sunlight spilling over rolling hills. Trees sway gently in the breeze, and a calm river winds through the valley, reflecting the sky.</p>
+      <p>Welcome to our website! This picture invites you in with warmth, creativity, and a sense of discovery and
+        connection.</p>
+      <p>The picture captures a peaceful landscape with soft sunlight spilling over rolling hills. Trees sway gently in
+        the breeze, and a calm river winds through the valley, reflecting the sky.</p>
       <button class="btn-primary" onclick="orderNow()">Order Now</button>
       <a class="btn-secondary" href="#contact">Contact Us</a>
     </div>
@@ -56,13 +113,45 @@
     </div>
   </section>
 
-  <main>
+  <main id="page-content">
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="#home"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="#about"><span itemprop="name">About</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="#menu"><span itemprop="name">Menu</span></a>
+          <meta itemprop="position" content="3" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="#testimonials"><span itemprop="name">Testimonials</span></a>
+          <meta itemprop="position" content="4" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="#gallery"><span itemprop="name">Gallery</span></a>
+          <meta itemprop="position" content="5" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="#contact"><span itemprop="name">Contact</span></a>
+          <meta itemprop="position" content="6" />
+        </li>
+      </ol>
+    </nav>
+
     <!-- About Section -->
     <section id="about" class="about-section">
       <img src="e6.jpg" alt="About picture" class="about-image" />
       <div class="about-text">
         <h2>About Us</h2>
-        <p>A picture of a mountain captures nature’s majesty—towering peaks, snow-capped tops, and rugged cliffs. Mist drifts along the slopes, while sunlight casts dramatic shadows. It evokes awe, peace, and the power of Earth’s ancient, enduring beauty in a single breathtaking view.</p>
+        <p>A picture of a mountain captures nature’s majesty—towering peaks, snow-capped tops, and rugged cliffs. Mist
+          drifts along the slopes, while sunlight casts dramatic shadows. It evokes awe, peace, and the power of Earth’s
+          ancient, enduring beauty in a single breathtaking view.</p>
         <div class="social-links">
           <!-- Social icons here -->
         </div>
@@ -162,27 +251,142 @@
         <button type="submit">Submit</button>
       </form>
     </section>
-     <section class="voice">
-  <h1>Text To Speech Converter</h1>
+    <section class="voice">
+      <div style="display: flex;  justify-content: center; align-items: center;">
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;"></div>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <h1 style="display: flex; flex-direction: row; justify-content: center; align-items: center;">Text To Speech
+            Converter</h1>
 
-  <textarea id="text_input" placeholder="Enter text here..."></textarea>
+          <textarea id="text_input" placeholder="Enter text here..."></textarea>
 
-  <div class="controls">
-    <label for="voice-select">Voice:</label>
-    <select id="voice-select" class="voice_select"></select>
+          <div class="controls">
+            <label for="voice-select">Voice:</label>
+            <select id="voice-select" class="voice_select"></select>
 
-    <label for="speed-range">Speed:</label>
-    <input type="range" id="speed-range" min="0.5" max="2" step="0.1" value="1">
-    <span id="speed-value">1.0x</span>
-  </div>
+            <label for="speed-range">Speed:</label>
+            <input type="range" id="speed-range" min="0.5" max="2" step="0.1" value="1">
+            <span id="speed-value">1.0x</span>
+          </div>
 
-  <button id="button-text" class="button-voice">Speak</button>
-</section>
+          <button id="button-text" class="button-voice">Speak</button>
+        </div>
+      </div>
+    </section>
 
+    <!-- FAQ Section for GEO -->
+    <section id="faq" class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3 class="faq-question">What is Picture?</h3>
+          <p class="faq-answer">Picture is a curated online gallery showcasing creative photography and visual storytelling. Our collection features stunning images of nature, emotions, and everyday beauty designed to inspire and connect.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question">What types of photography do you feature?</h3>
+          <p class="faq-answer">We feature a diverse range of photography including nature landscapes, emotional portraits, and artistic visual compositions that tell compelling stories through light, color, and composition.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question">How can I contact Picture?</h3>
+          <p class="faq-answer">You can reach us through our contact form on this website. Simply scroll to the Contact section, fill in your name, email, and message, and we will get back to you as soon as possible.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question">Can I order prints or use the images?</h3>
+          <p class="faq-answer">Our order feature is coming soon. Please check back later or contact us directly for inquiries about prints, licenses, and image usage rights.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question">How does the search feature work?</h3>
+          <p class="faq-answer">Use the search bar in the Menu section to filter our collection by keywords, titles, or descriptions. Start typing to see live results instantly, making it easy to find exactly what you are looking for.</p>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- FAQ Structured Data for AI / Generative Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "What is Picture?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Picture is a curated online gallery showcasing creative photography and visual storytelling. Our collection features stunning images of nature, emotions, and everyday beauty designed to inspire and connect."
+      }
+    },{
+      "@type": "Question",
+      "name": "What types of photography do you feature?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We feature a diverse range of photography including nature landscapes, emotional portraits, and artistic visual compositions that tell compelling stories through light, color, and composition."
+      }
+    },{
+      "@type": "Question",
+      "name": "How can I contact Picture?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can reach us through our contact form on this website. Simply scroll to the Contact section, fill in your name, email, and message, and we will get back to you as soon as possible."
+      }
+    },{
+      "@type": "Question",
+      "name": "Can I order prints or use the images?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our order feature is coming soon. Please check back later or contact us directly for inquiries about prints, licenses, and image usage rights."
+      }
+    },{
+      "@type": "Question",
+      "name": "How does the search feature work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the search bar in the Menu section to filter our collection by keywords, titles, or descriptions. Start typing to see live results instantly, making it easy to find exactly what you are looking for."
+      }
+    }]
+  }
+  </script>
+
+  <!-- Breadcrumb Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://example.com/#home"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About",
+      "item": "https://example.com/#about"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Menu",
+      "item": "https://example.com/#menu"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Testimonials",
+      "item": "https://example.com/#testimonials"
+    },{
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Gallery",
+      "item": "https://example.com/#gallery"
+    },{
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Contact",
+      "item": "https://example.com/#contact"
+    }]
+  }
+  </script>
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
-</html>
 
+</html>
